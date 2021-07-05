@@ -1,0 +1,25 @@
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  padding: 200px 0;
+  margin: 0 auto;
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/background-image-hero.jpg);
+}
+
+//test: not used
+.hero__section-title {
+  @extend %sectionTitle;
+
+  &--large {
+    @extend %sectionTitle;
+    @include font(900, 44px, 1.364, center, 0.06em);
+    text-transform: uppercase;
+    color: $secondaryTextColor;
+    margin-bottom: 30px;
+  }
+}

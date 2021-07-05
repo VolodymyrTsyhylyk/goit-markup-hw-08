@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+
+</head>
+<body>
+    <!-- шапка сторінки -->
+    <header class="header">
+        <div class="container header__container">
+            <a class="logo" href="./index.html">Web <span class="logo__second-half">Studio</span></a>
+            <nav class="site-nav header__site-nav">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item"><a href="./index.html" class="site-nav__link header__link">Студия</a></li>
+                    <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link site-nav__link--current-page header__link">Портфолио</a></li>
+                    <li class="site-nav__item"><a href="#contacts" class="site-nav__link header__link">Контакты</a></li>
+                </ul>
+            </nav>
+                <ul class="contacts header__contacts">
+                    <li class="contacts__item">
+                        <a href="mailto:info@devstudio.com" class="contacts__link header__link">
+                            <svg class="contacts__icon" width="16" height="12">
+                                <use href="./images/icon/icons.svg#icon-mail"></use>
+                            </svg>
+                        info@devstudio.com
+                    </a></li>
+                    <li class="contacts__item">
+                        <a href="tel:+380961111111" class="contacts__link header__link">
+                            <svg class="contacts__icon" width="10" height="12">
+                                <use href="./images/icon/icons.svg#icon-phone"></use>
+                            </svg>
+                        +38 096 111 11 11
+                    </a></li>
+                </ul>
+        </div>
+    </header>
+    
+    <!-- <h1></h1> -->
+    <!-- <h2></h2> -->
+
+    <!--Унікальний контент сторінки-->
+    <main>
+        <!-- основна секція -->
+        <section class="projects">
+            <!-- фільтр вкладки "портфоліо" -->
+            <div class="container">
+                <h1 class="projects__section-title projects__section-title--hidded">Наши Проекты</h1>
+                <ul class="filter">
+                    <li class="filter__item"><button type="button" class="filter__button">Все</button></li>
+                    <li class="filter__item"><button type="button" class="filter__button">Веб-сайты</button></li>
+                    <li class="filter__item"><button type="button" class="filter__button">Приложения</button></li>
+                    <li class="filter__item"><button type="button" class="filter__button">Дизайн</button></li>
+                    <li class="filter__item"><button type="button" class="filter__button">Маркетинг</button></li>
+                </ul>
+
+                <!-- основне портфоліо -->
+                <ul class="cardset">
+                    <li class="cardset__item">
+                        <a href="#" class="cardset__link">
+                            <div class="cardset__thumb">
+                                <img class="cardset__image" src="./images/technokryak.jpg" alt="technokryak" width="370">
+                                <div class="dropup cardset__dropup">
+                                    <p class="dropup__text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
+                                    шпионажа и атак на защищённые сервера конкурентов.</p>
+                                </div>
+                            </div>
+                            <div class="cardset__description">
+                                <h3 class="cardset__title">Технокряк</h3>
+                                <p class="cardset__text">Веб-сайт</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cardset__item">
+                        <a href="#" class="cardset__link">
+                            <div class="cardset__thumb">
+                                <img class="cardset__image" src="./images/poster.jpg" alt="poster" width="370">
+                                <div class="dropup cardset__dropup">
+                                    <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
+                                    similique iusto perspiciatis nobis qui.</p>
+                                </div>
+                            </div>
+                            <div class="cardset__description">
+                                <h3 class="cardset__title">Постер New Orlean vs Golden Star</h3>
+                                <p class="cardset__text">Дизайн</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li class="cardset__item">
+                        <a href="#" class="cardset__link">
+                            <div class="cardset__thumb">
+                                <img class="cardset__image" src="./images/seafood.jpg" alt="seafood" width="370">
+                                <div class="dropup cardset__dropup">
+                                    <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
+                                    similique iusto perspiciatis nobis qui.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="cardset__description">
+                                <h3 class="cardset__title">Ресторан Seafood</h3>
+                                <p class="cardset__text">Приложение</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cardset__item">
+                        <a href="#" class="cardset__link">
+                            <div class="cardset__thumb">
+                                <img class="cardset__image" src="./images/prime.jpg" alt="prime" width="370">
+                                <div class="dropup cardset__dropup">
+                                    <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
+                                    similique iusto perspiciatis nobis qui.</p>
+                                </div>
+                            </div>
+                            <div class="cardset__description">
+                                <h3 class="cardset__title">Проект Prime</h3>
+                                <p class="cardset__text">Маркетинг</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cardset__item">
+                        <a href="#" class="cardset__link">
+                            <div class="cardset__thumb">
+                                <img class="cardset__image" src="./images/boxes.jpg" alt="boxes" width="370">
+                                <div class="dropup cardset__dropup">
+                                    <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
+                                    similique iusto perspiciatis nobis qui.</p>
+                                </div>
+                            </div>
+                            <div class="cardset__description">
+                                <h3 class="cardset__title">Проект Boxes</h3>
+                                <p class="cardset__text">Приложение</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cardset__item">
+                        <a href="#" class="cardset__link">
+                            <div class="cardset__thumb">
+                                <img class="cardset__image" src="./images/noborders.jpg" alt="noborders" width="370">
+                                <div class="dropup cardset__dropup">
+                                    <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
+                                    similique iusto perspiciatis nobis qui.</p>
+                                </div>
+                            </div>
+                            <div class="cardset__description">
+                                <h3 class="cardset__title">Inspiration has no Borders</h3>
+                                <p class="cardset__text">Веб-сайт</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cardset__item">
+                        <a href="#" class="cardset__link">
+                            <div class="cardset__thumb">
+                                <img class="cardset__image" src="./images/limited-editions.jpg" alt="limited-editions" width="370">
+                                <div class="dropup cardset__dropup">
+                                    <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
+                                    similique iusto perspiciatis nobis qui.</p>
+                                </div>
+                            </div>
+                            <div class="cardset__description">
+                                <h3 class="cardset__title">Издание Limited Edition</h3>
+                                <p class="cardset__text">Дизайн</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cardset__item">
+                        <a href="#" class="cardset__link">
+                            <div class="cardset__thumb">
+                                <img class="cardset__image" src="./images/lab.jpg" alt="lab" width="370">
+                                <div class="dropup cardset__dropup">
+                                    <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
+                                    similique iusto perspiciatis nobis qui.</p>
+                                </div>
+                            </div>
+                            <div class="cardset__description">
+                                <h3 class="cardset__title">Проект LAB</h3>
+                                <p class="cardset__text">Маркетинг</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cardset__item">
+                        <a href="#" class="cardset__link">
+                            <div class="cardset__thumb">
+                                <img class="cardset__image" src="./images/business.jpg" alt="business" width="370">
+                                <div class="dropup cardset__dropup">
+                                    <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
+                                    similique iusto perspiciatis nobis qui.</p>
+                                </div>
+                            </div>
+                            <div class="cardset__description">
+                                <h3 class="cardset__title">Growing Business</h3>
+                                <p class="cardset__text">Приложение</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+    <!-- підвал сторінки -->
+    <footer id="contacts" class="footer">
+        <div class="container footer__container">
+            <address class="address">
+                <a class="logo logo--invert address__logo" href="./index.html">Web <span class="logo__second-half">Studio</span></a>
+                <ul class="contacts contacts--vertical">
+                    <li class="contacts__item contacts__item--vertical"><p class="contacts__text contacts__text--white">г. Киев, пр-т Леси Украинки, 26</p></li>
+                    <li class="contacts__item contacts__item--vertical"><a href="mailto:info@example.com" class="contacts__link contacts__link--translucent">info@example.com</a></li>
+                    <li class="contacts__item contacts__item--vertical"><a href="tell:+380991111111" class="contacts__link contacts__link--translucent">+38 099 111 11 11</a></li>
+                </ul>
+            </address>
+            <div class="follow-us">
+                <h3 class="follow-us__title follow-us__title--white">Присоединяйтесь</h3>
+                <ul class="iconset">
+                    <li class="iconset__item">
+                        <a href="#" class="iconset__link iconset__link--alternative">
+                            <svg class="iconset__icon" width="20" height="20">
+                                <use href="./images/icon/icons.svg#icon-instagram-white"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="iconset__item">
+                        <a href="#" class="iconset__link iconset__link--alternative">
+                            <svg class="iconset__icon" width="20" height="20">
+                                <use href="./images/icon/icons.svg#icon-twitter-white"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="iconset__item">
+                        <a href="#" class="iconset__link iconset__link--alternative">
+                            <svg class="iconset__icon" width="20" height="20">
+                                <use href="./images/icon/icons.svg#icon-facebook-white"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="iconset__item">
+                        <a href="#" class="iconset__link iconset__link--alternative">
+                            <svg class="iconset__icon" width="20" height="20">
+                                <use href="./images/icon/icons.svg#icon-linkedin-white"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+                        <form action="#" class="subscribe">
+                            <label class="subscribe__title subscribe__title--white" for="subscribe">Подпишитесь на рассылку</label>
+                            <div class="subscribe__form-field">
+                                <input type="email" class="subscribe__input" placeholder="E-mail" id="subscribe" />
+                                <button type="submit" class="button">
+                                    Подписаться
+                                    <svg class="button__icon" width="24" height="24">
+                                        <use href="./images/icon/icons.svg#icon-plane-send"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+        </div>
+    </footer>
+</body>
+</html>

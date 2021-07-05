@@ -1,0 +1,15 @@
+.dropup {
+  @extend %flexVerticalCentring;
+  width: 100%;
+  height: 100%;
+
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.dropup__text {
+  font-size: 18px;
+  line-height: 1.56;
+  color: $secondaryTextColor;
+}

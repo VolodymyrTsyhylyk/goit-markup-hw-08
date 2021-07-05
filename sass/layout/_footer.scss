@@ -1,0 +1,15 @@
+.footer {
+  background-color: $altBgColor;
+}
+
+.footer__container {
+  display: flex;
+}
+
+.footer__section-title {
+  @extend %sectionTitle;
+
+  &--hidded {
+    @extend %visuallyHidden;
+  }
+}

@@ -1,0 +1,44 @@
+.features {
+  @extend %sectionVerticalCentring;
+}
+
+.features__section-title {
+  @extend %sectionTitle;
+
+  &--hidded {
+    @extend %visuallyHidden;
+  }
+}
+
+.features__list {
+  display: flex;
+}
+
+.features__item {
+  display: block;
+  flex-basis: calc(100% / 4);
+
+  &:not(:first-child) {
+    @extend %inboxSpace;
+  }
+}
+
+.features__thumb {
+  @extend %flexCentring;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: $secondaryBgColor;
+  border-radius: 4px;
+}
+
+.features__title {
+  @include font($ta: left);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.features__text {
+  line-height: 1.714;
+  padding-bottom: 6px;
+}

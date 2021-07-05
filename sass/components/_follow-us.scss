@@ -1,0 +1,15 @@
+.follow-us {
+  margin-left: 70px;
+  padding-top: 72px;
+}
+
+.follow-us__title {
+  @include font($ta: left);
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+
+  &--white {
+    color: $secondaryTextColor;
+  }
+}

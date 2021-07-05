@@ -1,0 +1,47 @@
+.site-nav__list {
+  @extend %flexVerticalCentring;
+}
+
+.site-nav__item {
+  &:not(:first-child) {
+    margin-left: 50px;
+  }
+}
+
+.site-nav__link {
+  display: block;
+  position: relative;
+
+  font-weight: 500;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+
+  @extend %smoothTransition;
+  transition-property: color;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+
+.site-nav__link--current-page {
+  color: $accentColor;
+
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    bottom: 0;
+    z-index: 20;
+
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+    background-color: $accentColor;
+
+    @extend %fadeInAnimation;
+  }
+}

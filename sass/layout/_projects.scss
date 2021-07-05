@@ -1,0 +1,11 @@
+.projects {
+  @extend %sectionVerticalCentring;
+}
+
+.projects__section-title {
+  @extend %sectionTitle;
+
+  &--hidded {
+    @extend %visuallyHidden;
+  }
+}

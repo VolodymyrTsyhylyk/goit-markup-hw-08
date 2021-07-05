@@ -1,0 +1,42 @@
+.clients {
+  @extend %sectionVerticalCentring;
+  text-align: center;
+}
+
+.clients__section-title {
+  @extend %sectionTitle;
+}
+
+.clients__list {
+  @extend %flexCentring;
+}
+
+.clients__item {
+  width: 170px;
+  height: 92px;
+
+  &:not(:first-child) {
+    @extend %inboxSpace;
+  }
+}
+
+.clients__link {
+  @extend %flexCentring;
+
+  width: 100%;
+  height: 100%;
+
+  color: $primaryIconColor;
+
+  border: 1px solid $primaryIconColor;
+  border-radius: 4px;
+
+  transition-property: color, border-color;
+  @extend %smoothTransition;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+    border-color: $accentColor;
+  }
+}

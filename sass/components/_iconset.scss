@@ -1,0 +1,36 @@
+.iconset {
+  @extend %flexCentring;
+}
+
+.iconset__item {
+  width: 44px;
+  height: 44px;
+
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+
+.iconset__link {
+  @extend %flexCentring;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  color: $primaryIconColor;
+
+  transition-property: color, background-color;
+  @extend %smoothTransition;
+
+  &:hover,
+  &:focus {
+    color: $secondaryTextColor;
+    background-color: $accentColor;
+  }
+
+  &--alternative {
+    color: $secondaryTextColor;
+    background-color: $bgIconColor;
+  }
+}

@@ -1,0 +1,57 @@
+.contacts {
+  @extend %flexVerticalCentring;
+
+  &--vertical {
+    display: block;
+  }
+}
+
+.contacts__item {
+  &:not(:first-child) {
+    @extend %inboxSpace;
+  }
+
+  &--vertical:not(:last-child) {
+    margin: 0 0 6px 0;
+  }
+
+  &--vertical:last-child {
+    margin: 0;
+  }
+}
+
+.contacts__link {
+  position: relative;
+  @extend %flexVerticalCentring;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+
+  color: $primaryTextColor;
+
+  @extend %smoothTransition;
+  transition-property: color;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+
+  &--translucent {
+    @include fontSmall();
+    color: $translucentTextColor;
+  }
+}
+
+.contacts__text {
+  &--white {
+    @include fontSmall();
+    color: $secondaryTextColor;
+  }
+}
+
+.contacts__icon {
+  margin-right: 10px;
+}

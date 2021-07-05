@@ -1,0 +1,23 @@
+$animationDuration: 250ms;
+$primaryBezier: cubic-bezier(0.4, 0, 0.2, 1);
+
+%smoothTransition {
+  transition-duration: $animationDuration;
+  transition-timing-function: $primaryBezier;
+}
+
+%fadeInAnimation {
+  animation-name: fade-in;
+  animation-duration: $animationDuration;
+  animation-timing-function: $primaryBezier;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.button {
+  @extend %flexCentring;
+  margin: 0 auto;
+
+  min-width: 200px;
+  min-height: 50px;
+  border: none;
+  border-radius: 4px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+
+  color: $secondaryTextColor;
+  background-color: $accentColor;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  @extend %smoothTransition;
+  transition-property: background-color;
+
+  &:hover,
+  &:focus {
+    background-color: $buttonBgHoverColor;
+  }
+}
+
+.button__icon {
+  margin-left: 10px;
+}

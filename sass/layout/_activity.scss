@@ -1,0 +1,37 @@
+.activity {
+  padding-bottom: 94px;
+}
+
+.activity__section-title {
+  @extend %sectionTitle;
+}
+
+.activity__list {
+  display: flex;
+}
+
+.activity__item {
+  position: relative;
+  flex-basis: calc(100% / 3);
+
+  &:not(:first-child) {
+    @extend %inboxSpace;
+  }
+}
+
+.activity__title {
+  position: absolute;
+  bottom: 0px;
+
+  width: 100%;
+  padding: 27px 0;
+
+  @include font();
+  text-transform: uppercase;
+
+  background-color: rgba(47, 48, 58, 0.8);
+
+  &--white {
+    color: $secondaryTextColor;
+  }
+}
