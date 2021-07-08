@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 
-.dropup, .contacts__link, .contacts, .site-nav__list, .modal__custom-checkbox, .modal__form-field, .header__container {
+.dropup, .contacts__link, .contacts, .site-nav__list, .modal__custom-checkbox, .modal__form-field, .hero, .header__container {
   display: flex;
   align-items: center;
 }
@@ -24,11 +24,17 @@
 }
 
 .projects, .clients, .team, .features {
-  padding: 94px 0px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .projects, .clients, .team, .features {
+    padding: 94px 0px;
+  }
 }
 
-.contacts__item:not(:first-child), .clients__item:not(:first-child), .team__card:not(:first-child), .activity__item:not(:first-child), .features__item:not(:first-child) {
-  margin-left: 30px;
+.contacts__item:not(:first-child), .clients__item:not(:first-child), .activity__item:not(:first-child) {
+  margin-left: 0px;
 }
 
 .footer__section-title, .projects__section-title, .clients__section-title, .team__section-title, .activity__section-title, .features__section-title, .hero__section-title--large, .hero__section-title {
@@ -119,9 +125,24 @@ h3 {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .header {
@@ -151,32 +172,129 @@ h3 {
 }
 
 .hero {
-  max-width: 1600px;
-  height: 600px;
-  padding: 200px 0;
-  margin: 0 auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-image-hero.jpg);
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("..//..//images/backgrounds/mobbg-teamwork@1x.jpg");
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 600px;
+    padding: 200px 0;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("..//..//images/backgrounds/mobbg-teamwork@2x.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("..//..//images/backgrounds/mobbg-teamwork@3x.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 1) and (min-width: 481px), screen and (-webkit-min-device-pixel-ratio: 1) and (min-width: 481px), screen and (min-resolution: 96dpi) and (min-width: 481px), screen and (min-resolution: 1dppx) and (min-width: 481px) {
+  .hero {
+    background-position: center;
+    background-size: 768px 400px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("..//..//images/backgrounds/tabbg-teamwork@1x.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 481px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 481px), screen and (min-resolution: 192dpi) and (min-width: 481px), screen and (min-resolution: 2dppx) and (min-width: 481px) {
+  .hero {
+    background-position: center;
+    background-size: 768px 400px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("..//..//images/backgrounds/tabbg-teamwork@2x.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 3) and (min-width: 481px), screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 481px), screen and (min-resolution: 288dpi) and (min-width: 481px), screen and (min-resolution: 3dppx) and (min-width: 481px) {
+  .hero {
+    background-position: center;
+    background-size: 768px 400px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("..//..//images/backgrounds/tabbg-teamwork@3x.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 1) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 1) and (min-width: 1200px), screen and (min-resolution: 96dpi) and (min-width: 1200px), screen and (min-resolution: 1dppx) and (min-width: 1200px) {
+  .hero {
+    background-size: 1600px 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("..//..//images/backgrounds/desbg-teamwork@1x.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-size: 1600px 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("..//..//images/backgrounds/desbg-teamwork@2x.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 3) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 1200px), screen and (min-resolution: 288dpi) and (min-width: 1200px), screen and (min-resolution: 3dppx) and (min-width: 1200px) {
+  .hero {
+    background-size: 1600px 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("..//..//images/backgrounds/desbg-teamwork@3x.jpg");
+  }
+}
+
+.hero__container {
+  padding: 0 60px;
+}
+@media screen and (min-width: 768px) {
+  .hero__container {
+    padding: 0 204px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    padding: 0 270px;
+  }
 }
 
 .hero__section-title--large {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.364;
+  font-size: 26px;
+  line-height: 1.615;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .hero__section-title--large {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.364;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+}
 
 .features__list {
-  display: flex;
+  margin-bottom: -30px;
+}
+@media screen and (min-width: 768px) {
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .features__item {
   display: block;
-  flex-basis: calc(100% / 4);
 }
+@media screen and (min-width: 768px) {
+  .features__item {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__item {
+    flex-basis: calc((100% - 120px) / 4);
+    margin-left: 30px;
+  }
+}
+
 .features__thumb {
   width: 100%;
   height: 120px;
@@ -191,8 +309,13 @@ h3 {
   line-height: 1.143;
   text-align: left;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
+  text-align: center;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: left;
+  }
 }
 
 .features__text {
@@ -235,17 +358,37 @@ h3 {
 }
 
 .team__list {
-  display: flex;
+  margin-bottom: -30px;
+}
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .team__card {
-  flex-basis: calc 25%;
+  margin-bottom: 30px;
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+@media screen and (min-width: 768px) {
+  .team__card {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__card {
+    flex-basis: calc((100% - 120px) / 4);
+    margin-left: 30px;
+  }
+}
+
 .team__description {
-  padding: 30px 0;
+  padding: 30px 0 24px 0;
 }
 
 .team__title {

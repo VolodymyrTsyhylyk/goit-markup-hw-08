@@ -1,25 +1,160 @@
-.hero {
-  max-width: 1600px;
-  height: 600px;
-  padding: 200px 0;
-  margin: 0 auto;
+// .hero {
+//   max-width: 1600px;
+//   height: 600px;
+//   padding: 200px 0;
+//   margin: 0 auto;
 
+//   background-image: linear-gradient(
+//       rgba(47, 48, 58, 0.4),
+//       rgba(47, 48, 58, 0.4)
+//     ),
+//     url(../images/background-image-hero.jpg);
+// }
+
+// //test: not used
+// .hero__section-title {
+//   @extend %sectionTitle;
+
+//   &--large {
+//     @extend %sectionTitle;
+//     @include font(900, 44px, 1.364, center, 0.06em);
+//     text-transform: uppercase;
+//     color: $secondaryTextColor;
+//     margin-bottom: 30px;
+//   }
+// }
+
+.hero {
+  @extend %flexVerticalCentring;
+  height: 400px;
+
+  @media screen and (min-width: 1200px) {
+    height: 600px;
+    padding: 200px 0;
+  }
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/background-image-hero.jpg);
+    url("..//..//images/backgrounds/mobbg-teamwork@1x.jpg");
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("..//..//images/backgrounds/mobbg-teamwork@2x.jpg");
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("..//..//images/backgrounds/mobbg-teamwork@3x.jpg");
+  }
+
+  @media screen and (min-device-pixel-ratio: 1) and (min-width: 481px),
+    screen and (min-resolution: 96dpi) and (min-width: 481px),
+    screen and (min-resolution: 1dppx) and (min-width: 481px) {
+    background-position: center;
+    background-size: 768px 400px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("..//..//images/backgrounds/tabbg-teamwork@1x.jpg");
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 481px),
+    screen and (min-resolution: 192dpi) and (min-width: 481px),
+    screen and (min-resolution: 2dppx) and (min-width: 481px) {
+    background-position: center;
+    background-size: 768px 400px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("..//..//images/backgrounds/tabbg-teamwork@2x.jpg");
+  }
+
+  @media screen and (min-device-pixel-ratio: 3) and (min-width: 481px),
+    screen and (min-resolution: 288dpi) and (min-width: 481px),
+    screen and (min-resolution: 3dppx) and (min-width: 481px) {
+    background-position: center;
+    background-size: 768px 400px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("..//..//images/backgrounds/tabbg-teamwork@3x.jpg");
+  }
+
+  @media screen and (min-device-pixel-ratio: 1) and (min-width: 1200px),
+    screen and (min-resolution: 96dpi) and (min-width: 1200px),
+    screen and (min-resolution: 1dppx) and (min-width: 1200px) {
+    background-size: 1600px 600px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("..//..//images/backgrounds/desbg-teamwork@1x.jpg");
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    background-size: 1600px 600px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("..//..//images/backgrounds/desbg-teamwork@2x.jpg");
+  }
+  @media screen and (min-device-pixel-ratio: 3) and (min-width: 1200px),
+    screen and (min-resolution: 288dpi) and (min-width: 1200px),
+    screen and (min-resolution: 3dppx) and (min-width: 1200px) {
+    background-size: 1600px 600px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("..//..//images/backgrounds/desbg-teamwork@3x.jpg");
+  }
 }
 
-//test: not used
+.hero__container {
+  padding: 0 60px;
+
+  @media screen and(min-width:768px) {
+    padding: 0 204px;
+  }
+
+  @media screen and(min-width:1200px) {
+    padding: 0 270px;
+  }
+}
+
 .hero__section-title {
   @extend %sectionTitle;
 
   &--large {
     @extend %sectionTitle;
-    @include font(900, 44px, 1.364, center, 0.06em);
+    @include font(900, 26px, 1.615, center, 0.06em);
     text-transform: uppercase;
     color: $secondaryTextColor;
     margin-bottom: 30px;
+
+    @media screen and(min-width: 1200px) {
+      @include font(900, 44px, 1.364, center, 0.06em);
+    }
   }
 }

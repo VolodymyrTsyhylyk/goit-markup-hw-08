@@ -17,7 +17,7 @@
 <body>
 
     <!--Шапка сторінки-->
-    <header class="header">
+    <!-- <header class="header">
         <div class="container header__container">
             <a class="logo" href="./index.html">Web <span class="logo__second-half">Studio</span></a>
             <nav class="site-nav header__site-nav">
@@ -49,21 +49,28 @@
                         +38 096 111 11 11</a>
                 </li>
             </ul>
+
+            <button class="menu-toggle js-open-menu menu-button" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="menu-svg" width="24" height="16" aria-label="Переключатель мобильного меню">
+                <use href="./images/icons.svg#icon-menu-mobile"></use>
+                </svg>
+            </button>
+
         </div>
-    </header>
+    </header> -->
 
     <!--Унікальний контент сторінки-->
     <main>
         <!-- герой ШАПКА -->
-        <section class="hero">
+        <!-- <section class="hero">
             <div class="container">
                 <h1 class="hero__section-title hero__section-title--large">Эффективные решения<br> 
                     для вашего бизнеса</h1>
                 <button type="button" class="button" data-modal-open>Заказать услугу</button>
             </div>
-        </section>
+        </section> -->
         <!--Особливості-->
-        <section class="features">
+        <!-- <section class="features">
             <div class="container">
             <h2 class="features__section-title features__section-title--hidded">Особенности</h2>
                 <ul class="features__list">
@@ -108,10 +115,10 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
 
         <!--Чим займаємось-->
-        <section class="activity">
+        <!-- <section class="activity">
             <div class="container">
                 <h2 class="activity__section-title">Чем мы занимаемся</h2>
                 <ul class="activity__list">
@@ -135,7 +142,8 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        <!-- </section> -->
+
         <!--наша команда-->
         <section class="team">
             <div class="container">
@@ -301,7 +309,7 @@
 
 <!-- Постійні клієнти -->
 
-    <section class="clients">
+    <!-- <section class="clients">
         <div class="container">
             <h2 class="clients__section-title">Постоянные клиенты</h2>
             <ul class="clients__list">
@@ -349,10 +357,10 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> -->
 
     <!--Контакти-->
-    <footer id="contacts" class="footer">
+    <!-- <footer id="contacts" class="footer">
         <div class="container footer__container">
             <h2 class="footer__section-title footer__section-title--hidded">Контакти</h2>
             <address class="address">
@@ -416,9 +424,9 @@
             </form>
 
         </div>
-    </footer>
+    </footer> -->
             <!-- модальне вікно -->
-            <div class="modal modal--is-hidden" data-modal>
+            <!-- <div class="modal modal--is-hidden" data-modal>
                 <form class="modal__form">
                         <button class="modal__close-button" data-modal-close>
                             <svg class="modal__cross" width="11" height="11">
@@ -480,9 +488,12 @@
                             </div>
                             <button type="submit" class="button">Отправить</button>
                 </form>
-            </div>
+            </div> -->
 
-
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+<script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 
