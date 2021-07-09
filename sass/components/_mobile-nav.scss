@@ -1,0 +1,18 @@
+.mobile-nav__link {
+  @include font(500, 40px, 1.175, left, 0.02em);
+  color: $altTextColor;
+
+  transition-property: color;
+  @extend %smoothTransition;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+
+.mobile-nav__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}

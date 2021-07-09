@@ -1,0 +1,34 @@
+.mobile-social-media {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+}
+
+.mobile-social-media__link {
+  @include font(500, 18px, 1.222, center, 0.02em);
+  color: $accentColor;
+
+  transition-property: color;
+  @extend %smoothTransition;
+
+  &:hover,
+  &:focus {
+    color: $primaryTextColor;
+  }
+}
+
+.mobile-social-media__item {
+  margin-left: 10px;
+  margin-bottom: 10px;
+
+  &:not(:last-child) {
+    padding-right: 10px;
+  }
+  &:not(:last-child) {
+    border-right: 1px solid $inputBorderColor;
+  }
+}
+
+.mobile-menu__mobile-contacts {
+  margin: 64px 0;
+}

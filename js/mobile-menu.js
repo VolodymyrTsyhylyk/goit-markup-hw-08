@@ -1,13 +1,13 @@
 (() => {
-  const mobileMenu = document.querySelector('.js-menu-container');
-  const openMenuBtn = document.querySelector('.js-open-menu');
-  const closeMenuBtn = document.querySelector('.js-close-menu');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const openMenuBtn = document.querySelector('.header__mobile-menu-button');
+  const closeMenuBtn = document.querySelector('.mobile-menu__close-button');
 
   const toggleMenu = () => {
     const isMenuOpen =
       openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
-    mobileMenu.classList.toggle('is-open');
+    mobileMenu.classList.toggle('mobile-menu--is-open');
 
     const scrollLockMethod = !isMenuOpen
       ? 'disableBodyScroll'
@@ -22,7 +22,7 @@
   // в случае изменения ориентации устройства.
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
     if (!e.matches) return;
-    mobileMenu.classList.remove('is-open');
+    mobileMenu.classList.remove('mobile-menu--is-open');
     openMenuBtn.setAttribute('aria-expanded', false);
     bodyScrollLock.enableBodyScroll(document.body);
   });

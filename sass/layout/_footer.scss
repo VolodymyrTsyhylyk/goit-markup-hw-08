@@ -1,9 +1,14 @@
 .footer {
+  padding: 60px 0;
+
   background-color: $altBgColor;
 }
 
 .footer__container {
-  display: flex;
+  @media screen and(min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .footer__section-title {
@@ -11,5 +16,20 @@
 
   &--hidded {
     @extend %visuallyHidden;
+  }
+}
+
+.footer__contacts {
+  text-align: center;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+}
+
+.footer__iconset {
+  @media screen and (min-width: 1200px) {
+    justify-content: start;
   }
 }

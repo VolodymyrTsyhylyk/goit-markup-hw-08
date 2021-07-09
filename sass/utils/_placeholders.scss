@@ -1,6 +1,16 @@
 %flexVerticalCentring {
   display: flex;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 %flexCentring {
@@ -10,15 +20,11 @@
 }
 
 %sectionVerticalCentring {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  @media screen and (min-width: 1200px) {
-    padding: 94px 0px;
-  }
+  padding: 94px 0;
 }
 
 %inboxSpace {
-  margin-left: 0px;
+  margin-left: 30px;
 }
 
 %sectionTitle {
@@ -26,5 +32,13 @@
 
   font-size: 36px;
   line-height: 1.167;
+  text-align: center;
+}
+
+%sectionTitleSmall {
+  margin: 0 0 30px 0;
+
+  font-size: 28px;
+  line-height: 1.179;
   text-align: center;
 }

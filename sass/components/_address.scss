@@ -1,7 +1,16 @@
 .address {
-  padding: 60px 0;
+  @media screen and(min-width: 768px) {
+    width: 50%;
+    flex-grow: 1;
+  }
+  @media screen and(min-width: 1200px) {
+    width: 25%;
+  }
 }
 
 .address__logo {
   margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }

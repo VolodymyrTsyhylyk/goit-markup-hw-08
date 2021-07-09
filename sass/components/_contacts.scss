@@ -1,57 +1,135 @@
-.contacts {
-  @extend %flexVerticalCentring;
-
-  &--vertical {
-    display: block;
-  }
-}
-
 .contacts__item {
   &:not(:first-child) {
-    @extend %inboxSpace;
-  }
+    @media screen and (min-width: 768px) {
+      margin: 10px 0 0 0;
+    }
 
-  &--vertical:not(:last-child) {
-    margin: 0 0 6px 0;
-  }
-
-  &--vertical:last-child {
-    margin: 0;
+    @media screen and (min-width: 1200px) {
+      margin: 0 0 0 30px;
+    }
   }
 }
 
 .contacts__link {
-  position: relative;
-  @extend %flexVerticalCentring;
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
-
   color: $primaryTextColor;
-
-  @extend %smoothTransition;
   transition-property: color;
-
+  @extend %smoothTransition;
   &:hover,
   &:focus {
     color: $accentColor;
   }
+  @media screen and(min-width: 768px) {
+    display: flex;
+    align-items: center;
+    @include font(500, 12px, 1.167, left, 0.02em);
+  }
+  @media screen and (min-width: 1200px) {
+    @include font(500, 14px, 1.143, 0.02em);
+  }
+}
 
-  &--translucent {
-    @include fontSmall();
-    color: $translucentTextColor;
+.contacts__icon--tablet {
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+  margin-right: 8px;
+}
+
+.contacts__icon--desktop {
+  display: none;
+  margin-right: 10px;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.contacts__item--invert {
+  display: block;
+
+  &:not(:last-child) {
+    margin: 0 0 8px;
+  }
+  &:last-child {
+    margin: 0;
   }
 }
 
 .contacts__text {
   &--white {
-    @include fontSmall();
+    @include fontSmall($ta: center);
     color: $secondaryTextColor;
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
 }
 
-.contacts__icon {
-  margin-right: 10px;
+.contacts__link {
+  &--translucent {
+    display: block;
+    @include fontSmall($ta: center);
+    color: $translucentTextColor;
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
+  }
 }
+// .contacts {
+//   @extend %flexVerticalCentring;
+
+//   &--vertical {
+//     display: block;
+//   }
+// }
+
+// .contacts__item {
+//   &:not(:first-child) {
+//     @extend %inboxSpace;
+//   }
+
+//   &--vertical:not(:last-child) {
+//     margin: 0 0 6px 0;
+//   }
+
+//   &--vertical:last-child {
+//     margin: 0;
+//   }
+// }
+
+// .contacts__link {
+//   position: relative;
+//   @extend %flexVerticalCentring;
+
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 1.143;
+//   letter-spacing: 0.02em;
+
+//   color: $primaryTextColor;
+
+//   @extend %smoothTransition;
+//   transition-property: color;
+
+//   &:hover,
+//   &:focus {
+//     color: $accentColor;
+//   }
+
+//   &--translucent {
+//     @include fontSmall();
+//     color: $translucentTextColor;
+//   }
+// }
+
+// .contacts__text {
+//   &--white {
+//     @include fontSmall();
+//     color: $secondaryTextColor;
+//   }
+// }
+
+// .contacts__icon {
+//   margin-right: 10px;
+// }

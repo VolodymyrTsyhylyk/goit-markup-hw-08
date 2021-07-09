@@ -20,14 +20,85 @@
   @extend %flexVerticalCentring;
 }
 
-.header__site-nav {
-  margin-left: 93px;
+.header__mobile-menu-button {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0 10px auto;
+
+  background-color: transparent;
+  border: none;
+
+  transition-property: color;
+  @extend %smoothTransition;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
-.header__link {
-  padding: 32px 0;
+.header__site-nav {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 
 .header__contacts {
-  margin-left: auto;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
 }
+
+// .header {
+//   position: relative;
+
+//   &::after {
+//     content: "";
+
+//     position: absolute;
+//     bottom: 0;
+//     z-index: 10;
+
+//     display: block;
+
+//     width: 100%;
+//     height: 1px;
+//     background-color: $underHeaderLine;
+//   }
+// }
+
+// .header__container {
+//   @extend %flexVerticalCentring;
+// }
+
+// .header__site-nav {
+//   margin-left: 93px;
+// }
+
+// .header__link {
+//   padding: 32px 0;
+// }
+
+// .header__contacts {
+//   margin-left: auto;
+// }

@@ -17,9 +17,9 @@
 <body>
 
     <!--Шапка сторінки-->
-    <!-- <header class="header">
+    <header class="header">
         <div class="container header__container">
-            <a class="logo" href="./index.html">Web <span class="logo__second-half">Studio</span></a>
+            <a class="logo" href="./index.html">Web<span class="logo__second-half">Studio</span></a>
             <nav class="site-nav header__site-nav">
                 <ul class="site-nav__list">
                     <li class="site-nav__item">
@@ -36,41 +36,100 @@
             <ul class="contacts header__contacts">
                 <li class="contacts__item">
                     <a href="mailto:info@devstudio.com" class="contacts__link header__link">
-                        <svg class="contacts__icon" width="16" height="12">
+
+                        <svg class="contacts__icon contacts__icon--tablet" width="14" height="10">
+                            <use href="./images/icon/icons.svg#icon-mail"></use>
+                        </svg>
+
+
+                        <svg class="contacts__icon contacts__icon--desktop" width="16" height="12">
                             <use href="./images/icon/icons.svg#icon-mail"></use>
                         </svg>
                         info@devstudio.com</a>
                 </li>
                 <li class="contacts__item">
                     <a href="tel:+380961111111" class="contacts__link header__link">
-                        <svg class="contacts__icon" width="10" height="12">
+                        <svg class="contacts__icon contacts__icon--tablet" width="10" height="12">
+                            <use href="./images/icon/icons.svg#icon-phone"></use>
+                        </svg>
+                        <svg class="contacts__icon contacts__icon--desktop" width="16" height="12">
                             <use href="./images/icon/icons.svg#icon-phone"></use>
                         </svg>
                         +38 096 111 11 11</a>
                 </li>
             </ul>
 
-            <button class="menu-toggle js-open-menu menu-button" aria-expanded="false" aria-controls="mobile-menu">
-                <svg class="menu-svg" width="24" height="16" aria-label="Переключатель мобильного меню">
-                <use href="./images/icons.svg#icon-menu-mobile"></use>
-                </svg>
-            </button>
+        <button class="header__mobile-menu-button" type="button" aria-controls="mobile-menu" data-menu-open>
+            <svg width="24" height="16">
+                <use href="./images/icon/icons.svg#icon-menu-mobile"></use>
+            </svg>
+        </button>
 
+
+            <!-- МОБІЛЬНЕ МЕНЮ -->
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="mobile-menu__container">
+                    <nav class="mobile-nav mobile-menu__mobile-nav">
+                        <ul class="mobile-nav__list">
+                            <li class="mobile-nav__item">
+                                <a href="./index.html" class="mobile-nav__link">Студия</a>
+                            </li>
+                            <li class="mobile-nav__item">
+                                <a href="./portfolio.html" class="mobile-nav__link">Портфолио</a>
+                            </li>
+                            <li class="mobile-nav__item">
+                                <a href="#" class="mobile-nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                        <div class="mobile-menu__connect">
+                            <ul class="mobile-contacs mobile-menu__mobile-contacts">
+                                <li class="mobile-contacts__item">
+                                    <a href="tel:+380961111111" class="mobile-contacts__link">+38 096 111 11 11</a>
+                                </li>
+                                <li class="mobile-contacts__item">
+                                    <a href="mailto:info@devstudio.com" class="mobile-contacts__link">info@devstudio.com</a>
+                                </li>
+                            </ul>
+                            <ul class="mobile-social-media mobile-menu__mobile-social-media">
+                                <li class="mobile-social-media__item">
+                                    <a href="#" class="mobile-social-media__link">Instagram</a>
+                                </li>
+                                <li class="mobile-social-media__item">
+                                    <a href="#" class="mobile-social-media__link">Twitter</a>
+                                </li>
+                                <li class="mobile-social-media__item">
+                                    <a href="#" class="mobile-social-media__link">Facebook</a>
+                                </li>
+                                <li class="mobile-social-media__item">
+                                    <a href="#" class="mobile-social-media__link">LinkedIn</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="mobile-menu__close-button" data-menu-close>
+                            <svg class="mobile-menu__icon" width="18" height="18">
+                                <use href="./images/icon/icons.svg#icon-mobile-close_24px"></use>
+                            </svg>
+                        </button>
+
+
+                </div>
+            </div>
         </div>
-    </header> -->
+    </header>
 
     <!--Унікальний контент сторінки-->
     <main>
         <!-- герой ШАПКА -->
-        <!-- <section class="hero">
-            <div class="container">
-                <h1 class="hero__section-title hero__section-title--large">Эффективные решения<br> 
+        <section class="hero">
+            <div class="container hero__container">
+                <h1 class="hero__section-title hero__section-title--large">Эффективные решения
                     для вашего бизнеса</h1>
                 <button type="button" class="button" data-modal-open>Заказать услугу</button>
             </div>
-        </section> -->
+        </section>
         <!--Особливості-->
-        <!-- <section class="features">
+        <section class="features">
             <div class="container">
             <h2 class="features__section-title features__section-title--hidded">Особенности</h2>
                 <ul class="features__list">
@@ -115,10 +174,10 @@
                     </li>
                 </ul>
             </div>
-        </section> -->
+        </section>
 
         <!--Чим займаємось-->
-        <!-- <section class="activity">
+        <section class="activity">
             <div class="container">
                 <h2 class="activity__section-title">Чем мы занимаемся</h2>
                 <ul class="activity__list">
@@ -142,7 +201,7 @@
                     </li>
                 </ul>
             </div>
-        <!-- </section> -->
+        </section>
 
         <!--наша команда-->
         <section class="team">
@@ -309,7 +368,7 @@
 
 <!-- Постійні клієнти -->
 
-    <!-- <section class="clients">
+    <section class="clients">
         <div class="container">
             <h2 class="clients__section-title">Постоянные клиенты</h2>
             <ul class="clients__list">
@@ -357,29 +416,29 @@
                 </li>
             </ul>
         </div>
-    </section> -->
+    </section>
 
     <!--Контакти-->
-    <!-- <footer id="contacts" class="footer">
+    <footer id="contacts" class="footer">
         <div class="container footer__container">
             <h2 class="footer__section-title footer__section-title--hidded">Контакти</h2>
             <address class="address">
-                <a href="./index.html" class="logo logo--invert address__logo">Web <span class="logo__second-half">Studio</span></a>
-                <ul class="contacts contacts--vertical">
-                    <li class="contacts__item contacts__item--vertical">
+                <a href="./index.html" class="logo logo--invert address__logo">Web<span class="logo__second-half">Studio</span></a>
+                <ul class="contacts footer__contacts">
+                    <li class="contacts__item contacts__item--invert">
                         <p class="contacts__text contacts__text--white">г. Киев, пр-т Леси Украинки, 26</p>
                     </li>
-                    <li class="contacts__item contacts__item--vertical">
+                    <li class="contacts__item contacts__item--invert">
                         <a href="mailto:info@example.com" class="contacts__link contacts__link--translucent">info@example.com</a>
                     </li>
-                    <li class="contacts__item contacts__item--vertical">
+                    <li class="contacts__item contacts__item--invert">
                         <a href="tell:+380991111111" class="contacts__link contacts__link--translucent">+38 099 111 11 11</a>
                     </li>
                 </ul>
             </address>
             <div class="follow-us">
                 <h3 class="follow-us__title follow-us__title--white">Присоединяйтесь</h3>
-                <ul class="iconset">
+                <ul class="iconset footer__iconset">
                 <li class="iconset__item">
                     <a href="#" class="iconset__link iconset__link--alternative">
                         <svg class="iconset__icon" width="20" height="20">
@@ -424,9 +483,9 @@
             </form>
 
         </div>
-    </footer> -->
+    </footer>
             <!-- модальне вікно -->
-            <!-- <div class="modal modal--is-hidden" data-modal>
+            <div class="modal modal--is-hidden" data-modal>
                 <form class="modal__form">
                         <button class="modal__close-button" data-modal-close>
                             <svg class="modal__cross" width="11" height="11">
@@ -488,7 +547,7 @@
                             </div>
                             <button type="submit" class="button">Отправить</button>
                 </form>
-            </div> -->
+            </div>
 
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
     integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="

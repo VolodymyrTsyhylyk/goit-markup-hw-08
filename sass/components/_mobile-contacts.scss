@@ -1,0 +1,23 @@
+.mobile-contacts__item {
+  @include font(500, 24px, 1.167, left, 0.02em);
+  color: $primaryTextColor;
+
+  &:first-child {
+    @include font(500, 34px, 1.176, left, 0.02em);
+    color: $accentColor;
+    margin-bottom: 32px;
+
+    @media screen and(max-width: 376px) {
+      @include font(500, 27px, 1.176, left, 0.02em);
+    }
+  }
+}
+
+.mobile-contacts__link {
+  transition-property: color;
+  @extend %smoothTransition;
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}

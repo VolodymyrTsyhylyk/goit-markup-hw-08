@@ -2,15 +2,16 @@
   display: block;
 
   font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.192;
-  letter-spacing: 0.03em;
+  @include font(700, 24px, 1.167);
 
   color: $accentColor;
 
   &__second-half {
     color: $altTextColor;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(700, 26px, 1.192);
   }
 }
 
