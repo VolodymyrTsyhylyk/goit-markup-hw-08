@@ -1,3 +1,4 @@
+// КОНТАКТНІ ДАНІ
 .contacts__item {
   &:not(:first-child) {
     @media screen and (min-width: 768px) {
@@ -45,7 +46,6 @@
 
 .contacts__item--invert {
   display: block;
-
   &:not(:last-child) {
     margin: 0 0 8px;
   }
@@ -58,7 +58,6 @@
   &--white {
     @include fontSmall($ta: center);
     color: $secondaryTextColor;
-
     @media screen and (min-width: 1200px) {
       text-align: left;
     }
@@ -70,7 +69,6 @@
     display: block;
     @include fontSmall($ta: center);
     color: $translucentTextColor;
-
     @media screen and (min-width: 1200px) {
       text-align: left;
     }
