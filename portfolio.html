@@ -16,7 +16,7 @@
     <!-- шапка сторінки -->
     <header class="header">
         <div class="container header__container">
-            <a class="logo" href="./index.html">Web <span class="logo__second-half">Studio</span></a>
+            <a class="logo" href="./index.html">Web<span class="logo__second-half">Studio</span></a>
             <nav class="site-nav header__site-nav">
                 <ul class="site-nav__list">
                     <li class="site-nav__item"><a href="./index.html" class="site-nav__link header__link">Студия</a></li>
@@ -27,19 +27,79 @@
                 <ul class="contacts header__contacts">
                     <li class="contacts__item">
                         <a href="mailto:info@devstudio.com" class="contacts__link header__link">
-                            <svg class="contacts__icon" width="16" height="12">
-                                <use href="./images/icon/icons.svg#icon-mail"></use>
-                            </svg>
+                        <svg class="contacts__icon contacts__icon--tablet" width="14" height="10">
+                            <use href="./images/icon/icons.svg#icon-mail"></use>
+                        </svg>
+                        
+                        
+                        <svg class="contacts__icon contacts__icon--desktop" width="16" height="12">
+                            <use href="./images/icon/icons.svg#icon-mail"></use>
+                        </svg>
                         info@devstudio.com
                     </a></li>
                     <li class="contacts__item">
                         <a href="tel:+380961111111" class="contacts__link header__link">
-                            <svg class="contacts__icon" width="10" height="12">
-                                <use href="./images/icon/icons.svg#icon-phone"></use>
-                            </svg>
+                        <svg class="contacts__icon contacts__icon--tablet" width="10" height="12">
+                            <use href="./images/icon/icons.svg#icon-phone"></use>
+                        </svg>
+                        <svg class="contacts__icon contacts__icon--desktop" width="16" height="12">
+                            <use href="./images/icon/icons.svg#icon-phone"></use>
+                        </svg>
                         +38 096 111 11 11
                     </a></li>
                 </ul>
+                <button class="header__mobile-menu-button" type="button" aria-controls="mobile-menu" data-menu-open>
+                    <svg width="24" height="16">
+                        <use href="./images/icon/icons.svg#icon-menu-mobile"></use>
+                    </svg>
+                </button>
+            <!-- МОБІЛЬНЕ МЕНЮ -->
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="mobile-menu__container">
+                    <nav class="mobile-nav mobile-menu__mobile-nav">
+                        <ul class="mobile-nav__list">
+                            <li class="mobile-nav__item">
+                                <a href="./index.html" class="mobile-nav__link">Студия</a>
+                            </li>
+                            <li class="mobile-nav__item">
+                                <a href="./portfolio.html" class="mobile-nav__link">Портфолио</a>
+                            </li>
+                            <li class="mobile-nav__item">
+                                <a href="#" class="mobile-nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="mobile-menu__connect">
+                        <ul class="mobile-contacs mobile-menu__mobile-contacts">
+                            <li class="mobile-contacts__item">
+                                <a href="tel:+380961111111" class="mobile-contacts__link">+38 096 111 11 11</a>
+                            </li>
+                            <li class="mobile-contacts__item">
+                                <a href="mailto:info@devstudio.com" class="mobile-contacts__link">info@devstudio.com</a>
+                            </li>
+                        </ul>
+                        <ul class="mobile-social-media mobile-menu__mobile-social-media">
+                            <li class="mobile-social-media__item">
+                                <a href="#" class="mobile-social-media__link">Instagram</a>
+                            </li>
+                            <li class="mobile-social-media__item">
+                                <a href="#" class="mobile-social-media__link">Twitter</a>
+                            </li>
+                            <li class="mobile-social-media__item">
+                                <a href="#" class="mobile-social-media__link">Facebook</a>
+                            </li>
+                            <li class="mobile-social-media__item">
+                                <a href="#" class="mobile-social-media__link">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="mobile-menu__close-button" data-menu-close>
+                        <svg class="mobile-menu__icon" width="18" height="18">
+                            <use href="./images/icon/icons.svg#icon-mobile-close_24px"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
     
@@ -66,7 +126,39 @@
                     <li class="cardset__item">
                         <a href="#" class="cardset__link">
                             <div class="cardset__thumb">
-                                <img class="cardset__image" src="./images/technokryak.jpg" alt="technokryak" width="370">
+                                <picture>
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project1@1x.webp 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project1@2x.webp 2x,"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project1@1x.jpg 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project1@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                        />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project1@1x.webp 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project1@2x.webp 2x,"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+                                    />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project1@1x.jpg 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project1@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project1@1x.webp 1x,
+                                        ./images/portfolio/mob-portfolio/m-project1@2x.webp 2x,"
+                                        type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project1@1x.jpg 1x,
+                                        ./images/portfolio/mob-portfolio/m-project1@2x.jpg 2x"/>
+                                        <img class="cardset__image" src="./images/technokryak.jpg" alt="technokryak" width="370">
+                                </picture>
                                 <div class="dropup cardset__dropup">
                                     <p class="dropup__text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
                                     шпионажа и атак на защищённые сервера конкурентов.</p>
@@ -81,7 +173,35 @@
                     <li class="cardset__item">
                         <a href="#" class="cardset__link">
                             <div class="cardset__thumb">
+                                <picture>
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project2@1x.webp 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project2@2x.webp 2x,"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project2@1x.jpg 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project2@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project2@1x.webp 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project2@2x.webp 2x,"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project2@1x.jpg 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project2@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+                                
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project2@1x.webp 1x,
+                                        ./images/portfolio/mob-portfolio/m-project2@2x.webp 2x,"
+                                        type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project2@1x.jpg 1x,
+                                        ./images/portfolio/mob-portfolio/m-project2@2x.jpg 2x"
+                                    />
                                 <img class="cardset__image" src="./images/poster.jpg" alt="poster" width="370">
+                                </picture>
+
                                 <div class="dropup cardset__dropup">
                                     <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
                                     similique iusto perspiciatis nobis qui.</p>
@@ -97,7 +217,34 @@
                     <li class="cardset__item">
                         <a href="#" class="cardset__link">
                             <div class="cardset__thumb">
+                                <picture>
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project3@1x.webp 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project3@2x.webp 2x,"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project3@1x.jpg 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project3@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project3@1x.webp 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project3@2x.webp 2x,"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project3@1x.jpg 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project3@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+                                
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project3@1x.webp 1x,
+                                        ./images/portfolio/mob-portfolio/m-project3@2x.webp 2x," 
+                                        type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project3@1x.jpg 1x,
+                                        ./images/portfolio/mob-portfolio/m-project3@2x.jpg 2x" />
                                 <img class="cardset__image" src="./images/seafood.jpg" alt="seafood" width="370">
+                                </picture>
+                            
                                 <div class="dropup cardset__dropup">
                                     <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
                                     similique iusto perspiciatis nobis qui.</p>
@@ -113,7 +260,34 @@
                     <li class="cardset__item">
                         <a href="#" class="cardset__link">
                             <div class="cardset__thumb">
-                                <img class="cardset__image" src="./images/prime.jpg" alt="prime" width="370">
+                                <picture>
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project4@1x.webp 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project4@2x.webp 2x,"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project4@1x.jpg 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project4@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project4@1x.webp 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project4@2x.webp 2x,"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project4@1x.jpg 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project4@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+                                
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project4@1x.webp 1x,
+                                        ./images/portfolio/mob-portfolio/m-project4@2x.webp 2x," 
+                                        type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project4@1x.jpg 1x,
+                                        ./images/portfolio/mob-portfolio/m-project4@2x.jpg 2x" />
+                                    <img class="cardset__image" src="./images/prime.jpg" alt="prime" width="370">
+                                </picture>
+
                                 <div class="dropup cardset__dropup">
                                     <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
                                     similique iusto perspiciatis nobis qui.</p>
@@ -128,7 +302,34 @@
                     <li class="cardset__item">
                         <a href="#" class="cardset__link">
                             <div class="cardset__thumb">
+                                <picture>
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project5@1x.webp 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project5@2x.webp 2x,"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project5@1x.jpg 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project5@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project5@1x.webp 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project5@2x.webp 2x,"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project5@1x.jpg 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project5@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+                                
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project5@1x.webp 1x,
+                                        ./images/portfolio/mob-portfolio/m-project5@2x.webp 2x," 
+                                        type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project5@1x.jpg 1x,
+                                        ./images/portfolio/mob-portfolio/m-project5@2x.jpg 2x" />
                                 <img class="cardset__image" src="./images/boxes.jpg" alt="boxes" width="370">
+                                </picture>
+
                                 <div class="dropup cardset__dropup">
                                     <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
                                     similique iusto perspiciatis nobis qui.</p>
@@ -143,7 +344,34 @@
                     <li class="cardset__item">
                         <a href="#" class="cardset__link">
                             <div class="cardset__thumb">
-                                <img class="cardset__image" src="./images/noborders.jpg" alt="noborders" width="370">
+                                <picture>
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project6@1x.webp 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project6@2x.webp 2x,"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project6@1x.jpg 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project6@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project6@1x.webp 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project6@2x.webp 2x,"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project6@1x.jpg 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project6@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+                                
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project6@1x.webp 1x,
+                                        ./images/portfolio/mob-portfolio/m-project6@2x.webp 2x," 
+                                        type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project6@1x.jpg 1x,
+                                        ./images/portfolio/mob-portfolio/m-project6@2x.jpg 2x" />
+                                    <img class="cardset__image" src="./images/noborders.jpg" alt="noborders" width="370">
+                                </picture>
+
                                 <div class="dropup cardset__dropup">
                                     <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
                                     similique iusto perspiciatis nobis qui.</p>
@@ -158,7 +386,35 @@
                     <li class="cardset__item">
                         <a href="#" class="cardset__link">
                             <div class="cardset__thumb">
+
+                                <picture>
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project7@1x.webp 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project7@2x.webp 2x,"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project7@1x.jpg 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project7@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project7@1x.webp 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project7@2x.webp 2x,"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project7@1x.jpg 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project7@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+                                
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project7@1x.webp 1x,
+                                        ./images/portfolio/mob-portfolio/m-project7@2x.webp 2x," 
+                                        type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project7@1x.jpg 1x,
+                                        ./images/portfolio/mob-portfolio/m-project7@2x.jpg 2x" />
                                 <img class="cardset__image" src="./images/limited-editions.jpg" alt="limited-editions" width="370">
+                                </picture>
+
                                 <div class="dropup cardset__dropup">
                                     <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
                                     similique iusto perspiciatis nobis qui.</p>
@@ -173,7 +429,35 @@
                     <li class="cardset__item">
                         <a href="#" class="cardset__link">
                             <div class="cardset__thumb">
-                                <img class="cardset__image" src="./images/lab.jpg" alt="lab" width="370">
+
+                                <picture>
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project8@1x.webp 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project8@2x.webp 2x,"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project8@1x.jpg 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project8@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project8@1x.webp 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project8@2x.webp 2x,"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project8@1x.jpg 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project8@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+                                
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project8@1x.webp 1x,
+                                        ./images/portfolio/mob-portfolio/m-project8@2x.webp 2x," 
+                                        type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project8@1x.jpg 1x,
+                                        ./images/portfolio/mob-portfolio/m-project8@2x.jpg 2x" />
+                                        <img class="cardset__image" src="./images/lab.jpg" alt="lab" width="370">
+                                </picture>
+
                                 <div class="dropup cardset__dropup">
                                     <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
                                     similique iusto perspiciatis nobis qui.</p>
@@ -188,7 +472,34 @@
                     <li class="cardset__item">
                         <a href="#" class="cardset__link">
                             <div class="cardset__thumb">
-                                <img class="cardset__image" src="./images/business.jpg" alt="business" width="370">
+
+                                <picture>
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project9@1x.webp 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project9@2x.webp 2x,"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/desc-portfolio/desc-project9@1x.jpg 1x,
+                                        ./images/portfolio/desc-portfolio/desc-project9@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project9@1x.webp 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project9@2x.webp 2x,"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/tab-portfolio/tab-project9@1x.jpg 1x,
+                                        ./images/portfolio/tab-portfolio/tab-project9@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+                                
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project9@1x.webp 1x,
+                                        ./images/portfolio/mob-portfolio/m-project9@2x.webp 2x," type="image/webp" />
+                                    <source srcset="
+                                        ./images/portfolio/mob-portfolio/m-project9@1x.jpg 1x,
+                                        ./images/portfolio/mob-portfolio/m-project9@2x.jpg 2x" />
+                                    <img class="cardset__image" src="./images/business.jpg" alt="business" width="370">
+                                </picture>
+
                                 <div class="dropup cardset__dropup">
                                     <p class="dropup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eligendi,
                                     similique iusto perspiciatis nobis qui.</p>
@@ -209,16 +520,16 @@
     <footer id="contacts" class="footer">
         <div class="container footer__container">
             <address class="address">
-                <a class="logo logo--invert address__logo" href="./index.html">Web <span class="logo__second-half">Studio</span></a>
-                <ul class="contacts contacts--vertical">
-                    <li class="contacts__item contacts__item--vertical"><p class="contacts__text contacts__text--white">г. Киев, пр-т Леси Украинки, 26</p></li>
-                    <li class="contacts__item contacts__item--vertical"><a href="mailto:info@example.com" class="contacts__link contacts__link--translucent">info@example.com</a></li>
-                    <li class="contacts__item contacts__item--vertical"><a href="tell:+380991111111" class="contacts__link contacts__link--translucent">+38 099 111 11 11</a></li>
+                <a class="logo logo--invert address__logo" href="./index.html">Web<span class="logo__second-half">Studio</span></a>
+                <ul class="contacts footer__contacts">
+                    <li class="contacts__item contacts__item--invert"><p class="contacts__text contacts__text--white">г. Киев, пр-т Леси Украинки, 26</p></li>
+                    <li class="contacts__item contacts__item--invert"><a href="mailto:info@example.com" class="contacts__link contacts__link--translucent">info@example.com</a></li>
+                    <li class="contacts__item contacts__item--invert"><a href="tell:+380991111111" class="contacts__link contacts__link--translucent">+38 099 111 11 11</a></li>
                 </ul>
             </address>
             <div class="follow-us">
                 <h3 class="follow-us__title follow-us__title--white">Присоединяйтесь</h3>
-                <ul class="iconset">
+                <ul class="iconset footer__iconset">
                     <li class="iconset__item">
                         <a href="#" class="iconset__link iconset__link--alternative">
                             <svg class="iconset__icon" width="20" height="20">
@@ -263,5 +574,9 @@
                         </form>
         </div>
     </footer>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"></script>
+        <script defer src="./js/mobile-menu.js"></script>
 </body>
 </html>

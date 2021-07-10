@@ -1,24 +1,40 @@
 .cardset {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -30px 0 0 -30px;
+  margin: 40px 0 -30px 0;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0 -30px -30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 50px 0 -30px -30px;
+  }
 }
 
 .cardset__item {
-  width: 370px;
-  margin: 30px 0 0 30px;
+  display: block;
+  margin: 0 0 30px 0;
+
+  @media screen and (min-width: 768px) {
+    margin: 0 0 30px 30px;
+    flex-basis: calc((100% - 60px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 3);
+  }
 }
 
 .cardset__thumb {
   position: relative;
   overflow: hidden;
-  height: 294px;
 }
 
 .cardset__dropup {
   position: absolute;
   bottom: 0;
   left: 0;
+
   transform: translateY(101%);
   transition-property: transform;
   @extend %smoothTransition;
@@ -38,6 +54,12 @@
       transform: translateY(0);
     }
   }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 .cardset__description {
@@ -45,11 +67,14 @@
   border-width: 0px 1px 1px;
   border-style: solid;
   border-color: #eeeeee;
+  @media screen and (min-width: 768px) {
+    flex-grow: 1;
+  }
 }
 
 .cardset__title {
   @include font(700, 18px, 2, left, 0.06em);
-  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .cardset__text {

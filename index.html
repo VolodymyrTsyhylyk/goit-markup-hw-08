@@ -183,19 +183,34 @@
                 <ul class="activity__list">
                     <li class="activity__item">
                         <a href="" class="activity__link">
-                            <img class="activity__image" src="./images/img1.jpg" alt="клавиатура" width="370">
+                            <picture class="activity__image">
+                                <source srcset="
+                                    ./images/activity/box1@1x.jpg 1x,
+                                    ./images/activity/box1@2x.jpg 2x"/>
+                                    <img class="activity__image" src="./images/img1.jpg" alt="клавиатура" width="370">
+                            </picture>
                         <h3 class="activity__title activity__title--white">Десктопные приложения</h3>
                         </a>
                     </li>
                     <li class="activity__item">
                         <a href="#" class="activity__link">
-                            <img class="activity__image" src="./images/img2.jpg" alt="телефон" width="370">
+                            <picture class="activity__image">
+                                <source srcset="
+                                    ./images/activity/box2@1x.jpg 1x,
+                                    ./images/activity/box2@2x.jpg 2x" />
+                                    <img class="activity__image" src="./images/img2.jpg" alt="телефон" width="370">
+                            </picture>
                         <h3 class="activity__title activity__title--white">Мобильные приложения</h3>
                         </a>
                     </li>
                     <li class="activity__item">
                         <a href="#" class="activity__link">
-                            <img class="activity__image" src="./images/img3.jpg" alt="планшет" width="370">
+                            <picture class="activity__image">
+                                <source srcset="
+                                    ./images/activity/box3@1x.jpg 1x,
+                                    ./images/activity/box3@2x.jpg 2x" />
+                                    <img class="activity__image" src="./images/img3.jpg" alt="планшет" width="370">
+                            </picture>
                         <h3 class="activity__title activity__title--white">Дизайнерские решения</h3>
                         </a>
                     </li>
@@ -209,7 +224,32 @@
                 <h2 class="team__section-title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__card">
+                        <picture class="team__picture">
+                            <source srcset="
+                                ./images/team/desc-team/desc-worker1@1x.webp 1x,
+                                ./images/team/desc-team/desc-worker1@2x.webp 2x"
+                                media="(min-width: 1200px)"
+                                type="image/webp"/>
+                            <source srcset="
+                                ./images/team/desc-team/desc-worker1@1x.jpg 1x,
+                                ./images/team/desc-team/desc-worker1@2x.jpg 2x"
+                                media="(min-width: 1200px)"/>
+                            <source srcset="./images/team/tab-team/tab-worker1@1x.webp 1x, ./images/team/tab-team/tab-worker1@2x.webp 2x"
+                            media="(min-width: 768px)"
+                            type="image/webp">
+                            <source srcset="
+                                ./images/team/t-team/tab-worker1@1x.jpg 1x,
+                                ./images/team/t-team/tab-worker1@2x.jpg 2x"
+                                media="(min-width: 768px)"/>
+                            <source srcset="
+                                ./images/team/mob-team/m-worker1@1x.webp 1x,
+                                ./images/team/mob-team/m-worker1@2x.webp 2x" 
+                                type="image/webp"/>
+                            <source srcset="
+                                ./images/team/mob-team/m-worker1@1x.jpg 1x,
+                                ./images/team/mob-team/m-worker1@2x.jpg 2x" />
                             <img class="team__image" src="./images/igorini.jpg" alt="Игорь Демьяненко" width="270">
+                        </picture>
                             <div class="team__description">
                                 <h3 class="team__title">Игорь Демьяненко</h3>
                                 <p lang="en" class="team__text">Product Designer</p>
@@ -248,7 +288,31 @@
                         
                     </li>
                     <li class="team__card">
-                            <img class="team__image" src="./images/olha.jpg" alt="Ольга Репина" width="270">
+                        <picture class="team__picture">
+                            <source srcset="./images/team/desc-team/desc-worker2@1x.webp 1x, 
+                                ./images/team/desc-team/desc-worker2@2x.webp 2x"
+                                media="(min-width: 1200px)"
+                                type="image/webp"/>
+                            <source srcset="
+                                ./images/team/desc-team/desc-worker2@1x.jpg 1x,
+                                ./images/team/desc-team/desc-worker2@2x.jpg 2x" 
+                                media="(min-width: 1200px)"/>
+                            <source srcset="
+                                ./images/team/tab-team/tab-worker2@1x.webp 1x, 
+                                ./images/team/tab-team/tab-worker2@2x.webp 2x"
+                                media="(min-width: 768px)" type="image/webp"/>
+                            <source srcset="
+                                ./images/team/t-team/tab-worker2@1x.jpg 1x,
+                                ./images/team/t-team/tab-worker2@2x.jpg 2x" media="(min-width: 768px)"/>
+                            <source srcset="
+                                ./images/team/mob-team/m-worker2@1x.webp 1x,
+                                ./images/team/mob-team/m-worker2@2x.webp 2x" type="image/webp">
+                            <source srcset="
+                                ./images/team/mob-team/m-worker2@1x.jpg 1x,
+                                ./images/team/mob-team/m-worker2@2x.jpg 2x"/>
+                        <img class="team__image" src="./images/olha.jpg" alt="Ольга Репина" width="270">
+                        </picture>
+                            
                             <div class="team__description">
                                 <h3 class="team__title">Ольга Репина</h3>
                                 <p lang="en" class="team__text">Frontend Developer</p>
@@ -286,7 +350,35 @@
                         
                     </li>
                     <li class="team__card">
-                            <img class="team__image" src="./images/mikola.jpg" alt="Николай Тарасов" width="270">
+                        <picture class="team__picture">
+                            <source srcset="
+                                ./images/team/desc-team/desc-worker3@1x.webp 1x, 
+                                ./images/team/desc-team/desc-worker3@2x.webp 2x" 
+                                media="(min-width: 1200px)"
+                                type="image/webp"/>
+                            <source srcset="
+                                ./images/team/desc-team/desc-worker3@1x.jpg 1x,
+                                ./images/team/desc-team/desc-worker3@2x.jpg 2x" 
+                                media="(min-width: 1200px)" />
+                            <source srcset="
+                                ./images/team/tab-team/tab-worker3@1x.webp 1x, 
+                                ./images/team/tab-team/tab-worker3@2x.webp 2x" 
+                                media="(min-width: 768px)"
+                                type="image/webp" />
+                            <source srcset="
+                                ./images/team/t-team/tab-worker3@1x.jpg 1x,
+                                ./images/team/t-team/tab-worker3@2x.jpg 2x" 
+                                media="(min-width: 768px)" />
+                            <source srcset="
+                                ./images/team/mob-team/m-worker3@1x.webp 1x,
+                                ./images/team/mob-team/m-worker3@2x.webp 2x" 
+                                type="image/webp">
+                            <source srcset="
+                                ./images/team/mob-team/m-worker3@1x.jpg 1x,
+                                ./images/team/mob-team/m-worker3@2x.jpg 2x" />
+                        <img class="team__image" src="./images/mikola.jpg" alt="Николай Тарасов" width="270">
+                        </picture>
+
                             <div class="team__description">
                                 <h3 class="team__title">Николай Тарасов</h3>
                                 <p lang="en" class="team__text">Marketing</p>
@@ -324,7 +416,35 @@
                         
                     </li>
                     <li class="team__card">
+                        <picture class="team__picture">
+                            <source srcset="
+                                ./images/team/desc-team/desc-worker4@1x.webp 1x, 
+                                ./images/team/desc-team/desc-worker4@2x.webp 2x" 
+                                media="(min-width: 1200px)"
+                                type="image/webp"/>
+                            <source srcset="
+                                ./images/team/desc-team/desc-worker4@1x.jpg 1x,
+                                ./images/team/desc-team/desc-worker4@2x.jpg 2x" 
+                                media="(min-width: 1200px)" />
+                            <source srcset="
+                                ./images/team/tab-team/tab-worker4@1x.webp 1x, 
+                                ./images/team/tab-team/tab-worker4@2x.webp 2x" 
+                                media="(min-width: 768px)"
+                                type="image/webp" />
+                            <source srcset="
+                                ./images/team/t-team/tab-worker4@1x.jpg 1x,
+                                ./images/team/t-team/tab-worker4@2x.jpg 2x" 
+                                media="(min-width: 768px)" />
+                            <source srcset="
+                                ./images/team/mob-team/m-worker4@1x.webp 1x,
+                                ./images/team/mob-team/m-worker4@2x.webp 2x" 
+                                type="image/webp">
+                            <source srcset="
+                                ./images/team/mob-team/m-worker4@1x.jpg 1x,
+                                ./images/team/mob-team/m-worker4@2x.jpg 2x" />
                             <img class="team__image" src="./images/mihail.jpg" alt="Михаил Ермаков" width="270">
+                        </picture>
+
                             <div class="team__description">
                                 <h3 class="team__title">Михаил Ермаков</h3>
                                 <p class="team__text">UI Designer</p>
