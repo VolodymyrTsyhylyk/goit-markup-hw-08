@@ -5,7 +5,14 @@
 }
 
 .team__section-title {
-  @extend %sectionTitle;
+  @extend %sectionTitleSmall;
+
+  @media screen and(min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.167;
+
+    margin: 0 0 50px 0;
+  }
 }
 
 .team__list {

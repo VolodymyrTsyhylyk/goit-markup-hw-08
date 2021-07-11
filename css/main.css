@@ -36,21 +36,21 @@
 }
 
 .team {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
 .activity__item:not(:first-child) {
   margin-left: 30px;
 }
 
-.footer__section-title, .projects__section-title, .team__section-title, .activity__section-title, .features__section-title, .hero .hero__section-title--large, .hero .hero__section-title {
+.footer__section-title, .projects__section-title, .activity__section-title, .features__section-title, .hero .hero__section-title--large, .hero .hero__section-title {
   margin: 0 0 50px 0;
   font-size: 36px;
   line-height: 1.167;
   text-align: center;
 }
 
-.clients__section-title {
+.clients__section-title, .team__section-title {
   margin: 0 0 30px 0;
   font-size: 28px;
   line-height: 1.179;
@@ -115,7 +115,7 @@ h3 {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -403,6 +403,14 @@ h3 {
 .team {
   text-align: center;
   background-color: #f5f4fa;
+}
+
+@media screen and (min-width: 1200px) {
+  .team__section-title {
+    font-size: 36px;
+    line-height: 1.167;
+    margin: 0 0 50px 0;
+  }
 }
 
 .team__list {
